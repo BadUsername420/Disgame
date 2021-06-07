@@ -94,13 +94,12 @@ The base (Disgame) is the start to any game. It is used to render the view to a 
 
 #### Methods
 
-| Name                     | Description                                                  | Returns |
-| ------------------------ | ------------------------------------------------------------ | ------- |
-| `render()`               | "Renders" the game view as text to the Discord message. (Should be called when you want to update a change on the screen) | `void`  |
-| `addTile(tile: Tile)`    | Adds a new tile object to the game.                          | `tile`  |
-| `removeTile(tile: Tile)` | Removes a tile from the game.                                | `void`  |
-
-
+| Name                     | Description                                                  | Returns  |
+| ------------------------ | ------------------------------------------------------------ | -------- |
+| `render()`               | "Renders" the game view as text to the Discord message. (Should be called when you want to update a change on the screen) | `void`   |
+| `addTile(tile: Tile)`    | Adds a new tile object to the game.                          | `tile`   |
+| `removeTile(tile: Tile)` | Removes a tile from the game.                                | `void`   |
+| `getTile(name: string)`  | Gets all tiles with the chosen name.                         | `Tile[]` |
 
 ### Tiles
 
@@ -131,10 +130,11 @@ game.render();
 
 #### Options/Properties
 
-| Optional | Name     | Description                                              | Default        |
-| -------- | -------- | -------------------------------------------------------- | -------------- |
-| ❌        | emoji    | `string `The emoji used to display the tile              |                |
-| ✅        | position | `(IPosition) {x: number, y: number}` The tile's position | `{x: 0, y: 0}` |
+| Optional | Name     | Description                                                  | Default        |
+| -------- | -------- | ------------------------------------------------------------ | -------------- |
+| ❌        | emoji    | `string `The emoji used to display the tile                  |                |
+| ✅        | name     | `name` Used to get tiles by nameusing the `getTile(tile: string)` function. |                |
+| ✅        | position | `(IPosition) {x: number, y: number}` The tile's position     | `{x: 0, y: 0}` |
 
 
 
@@ -149,3 +149,4 @@ game.render();
 ## Credits
 
 **Made by** [Badusername420](https://badusername420.github.io)
+

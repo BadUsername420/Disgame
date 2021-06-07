@@ -8,18 +8,21 @@ interface IPosition {
 }
 
 interface ITileOptions {
+    name?: string;
     emoji: Material | string;
     position?: IPosition;
 }
 class Tile {
+    public name?: string;
     public emoji!: Material | string;
     public position!: IPosition;
     public id!: number;
 
     constructor(options: ITileOptions) {
-        const { emoji, position } = options;
+        const { emoji, position, name } = options;
 
-        this.emoji = emoji || "🍎";
+        this.name = name;
+        this.emoji = emoji;
         this.position = position || { x: 0, y: 0 };
     }
 }

@@ -65,7 +65,13 @@ class Disgame {
         if (foundTile) {
             this.tiles = this.tiles.filter((v) => v !== foundTile);
         }
+    }
 
+    getTile(name: string) {
+        let foundTiles = this.tiles.filter((v) => v.name == name);
+        if (foundTiles.length > 0)
+            return foundTiles;
+        else return undefined;
     }
 }
 
