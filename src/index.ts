@@ -1,5 +1,11 @@
-class FunnyMan420 {
+import Disgame from "./core/Disgame";
+import Tile, { Material } from "./core/Tile";
 
+export {
+    // core
+    Disgame,
+    Tile,
+
+    // extras
+    Material
 }
-
-export default FunnyMan420;

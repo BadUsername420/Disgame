@@ -1,13 +1,13 @@
 {
   "name": "disgame",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A lightweight tile-based Discord game engine!",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build" : "tsc",
-    "prepare" : "npm run build",
+    "build": "tsc",
+    "prepare": "npm run build",
     "prepublishonly": "git push -u origin master",
     "version": "git add -A src"
   },
@@ -19,5 +19,8 @@
   },
   "devDependencies": {
     "typescript": "^4.3.2"
+  },
+  "dependencies": {
+    "discord.js": "^12.5.3"
   }
 }
