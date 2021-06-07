@@ -1,6 +1,6 @@
 {
   "name": "disgame",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A lightweight tile-based Discord game engine!",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
@@ -8,8 +8,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
     "prepare": "npm run build",
-    "prepublishonly": "git push -u origin master",
-    "version": "git add -A src"
+    "prepublishonly": "git add * && git commit && git push -u origin master"
   },
   "author": "badusername420",
   "license": "ISC",
