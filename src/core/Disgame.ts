@@ -33,7 +33,7 @@ class Disgame {
     async render() {
         let renderText = "";
 
-        for (var yIndex = 0; yIndex < this.size.width; yIndex++) {
+        for (var yIndex = 0; yIndex < this.size.height; yIndex++) {
             for (var xIndex = 0; xIndex < this.size.width; xIndex++) {
                 let foundTile = this.tiles.find((value) => value.position.x === xIndex && value.position.y === yIndex);
                 if (foundTile)
