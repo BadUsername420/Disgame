@@ -1,13 +1,18 @@
 {
   "name": "disgame",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A lightweight tile-based Discord game engine!",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
+  "files": ["./lib/**/*"],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
     "prepare": "npm run build",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "lint": "tslint -p tsconfig.json",
+    "preversion" : "npm run lint",
+    "version" : "npm run format && git add -A src",
     "github": "git add * && git commit && git push -u origin master"
   },
   "author": "badusername420",
@@ -17,6 +22,9 @@
     "url": "https://github.com/BadUsername420/Disgame"
   },
   "devDependencies": {
+    "prettier": "^2.3.1",
+    "tslint": "^6.1.3",
+    "tslint-config-prettier": "^1.18.0",
     "typescript": "^4.3.2"
   },
   "dependencies": {
