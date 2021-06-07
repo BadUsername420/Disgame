@@ -1,10 +1,10 @@
 {
   "name": "disgame",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A lightweight tile-based Discord game engine!",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
-  "files": ["./lib/**/*"],
+  "files": ["lib/**/*"],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
