@@ -28,20 +28,20 @@ client.on("message", async (msg) => {
         });
 
         // create tiles
-        const tile1 = game.addTile(new Tile({ emoji: "🍎", position: { x: 0, y: 0 } }));
-        const tile2 = game.addTile(new Tile({ emoji: "🍌", position: { x: 3, y: 3 } }));
-        const tile3 = game.addTile(new Tile({ emoji: "🍐", position: { x: 5, y: 5 } }));
+        const appleTile = game.addTile(new Tile({ emoji: "🍎", position: { x: 0, y: 0 } }));
+        const bananaTile = game.addTile(new Tile({ emoji: "🍌", position: { x: 3, y: 3 } }));
+        const pearTile = game.addTile(new Tile({ emoji: "🍐", position: { x: 5, y: 5 } }));
 
         for (var i = 0; i < 4; i++) {
-            // increment position of tile1 to move diagonally
-            tile1.position.x++;
-            tile1.position.y++;
+            // increment position of "appleTile" to move diagonally
+            appleTile.position.x++;
+            appleTile.position.y++;
 
             game.render(); // call render fuction to edit the message with the updated scene
             await wait(1000); // wait 1 second
         }
 
-        game.removeTile(tile1); // remove tile1 once its done
+        game.removeTile(appleTile); // remove "appleTile" once its done
         game.render(); // render 
 });
 
@@ -103,7 +103,7 @@ The base (Disgame) is the start to any game. It is used to render the view to a 
 
 ### Tiles
 
-Tiles are emojis at certain positions on the game canvas. The can be added and remove from games using the respective game functions `addTile(tile: Tile)`/`removeTile(tile: Tile)`.
+Tiles are emojis at certain positions on the game canvas. The can be added and remove from games using the respective game functions `addTile(tile: Tile)`/`removeTile(tile: Tile)`. Tiles can also be found by calling `getTile(name: string)`.
 
 ![Disgame_Position](https://user-images.githubusercontent.com/44450511/121060536-c89ecb00-c790-11eb-874e-beed729f1a61.png)
 
@@ -130,11 +130,11 @@ game.render();
 
 #### Options/Properties
 
-| Optional | Name     | Description                                                  | Default        |
-| -------- | -------- | ------------------------------------------------------------ | -------------- |
-| ❌        | emoji    | `string `The emoji used to display the tile                  |                |
-| ✅        | name     | `name` Used to get tiles by nameusing the `getTile(tile: string)` function. |                |
-| ✅        | position | `(IPosition) {x: number, y: number}` The tile's position     | `{x: 0, y: 0}` |
+| Optional | Name       | Description                                                  | Default        |
+| -------- | ---------- | ------------------------------------------------------------ | -------------- |
+| ❌        | `emoji`    | `string `The emoji used to display the tile                  |                |
+| ✅        | `name`     | `name` Used to get tiles by name using the `getTile(tile: string)` function. |                |
+| ✅        | `position` | `(IPosition) {x: number, y: number}` The tile's position     | `{x: 0, y: 0}` |
 
 
 

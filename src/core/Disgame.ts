@@ -10,7 +10,7 @@ interface IDisgameOptions {
     backgroundEmoji?: string;
 }
 class Disgame {
-    protected message!: Discord.Message;
+    readonly message!: Discord.Message;
     public size!: {
         width: number;
         height: number;
@@ -45,9 +45,9 @@ class Disgame {
         }
 
         if (this.message.embeds[0]) {
-            this.message.edit(this.message.embeds[0].setDescription(renderText)); //embeds
+            return this.message.edit(this.message.embeds[0].setDescription(renderText)); //embeds
         } else {
-            this.message.edit(renderText); // plain text
+            return this.message.edit(renderText); // plain text
         }
     }
 
@@ -60,18 +60,11 @@ class Disgame {
     }
 
     removeTile(tile: Tile) {
-        let foundTile = this.tiles.find((v) => v.id == tile.id);
-
-        if (foundTile) {
-            this.tiles = this.tiles.filter((v) => v !== foundTile);
-        }
+        this.tiles = this.tiles.filter((v) => v !== tile);
     }
 
     getTile(name: string) {
-        let foundTiles = this.tiles.filter((v) => v.name == name);
-        if (foundTiles.length > 0)
-            return foundTiles;
-        else return undefined;
+        return this.tiles.filter((v) => v.name == name);
     }
 }
 
