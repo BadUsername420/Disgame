@@ -45,7 +45,7 @@ class Disgame {
         }
 
         if (this.message.embeds[0]) {
-            return this.message.edit(this.message.embeds[0].setDescription(renderText)); //embeds
+            return this.message.edit({ embeds: [this.message.embeds[0].setDescription(renderText)] }); //embeds
         } else {
             return this.message.edit(renderText); // plain text
         }
