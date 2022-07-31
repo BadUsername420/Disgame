@@ -150,5 +150,5 @@ game.render();
 
 ## Credits
 
-**Made by** [Badusername420](https://badusername420.github.io)
+**Made by** [IDontLua](https://IDontLua.github.io)
 
