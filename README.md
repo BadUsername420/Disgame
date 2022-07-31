@@ -4,6 +4,9 @@ Disgame is an extremely lightweight Discord game engine. (**Beta**)
 
 ![ezgif-2-42edb508961e](https://user-images.githubusercontent.com/44450511/121056411-2aa90180-c78c-11eb-8cf7-93a97aabf3f6.gif)
 
+## Installation
+`$ npm install Disgame`
+
 ```typescript
 // ...
 const wait = (ms: number) => new Promise((resolve, reject) => setTimeout(resolve, ms));
